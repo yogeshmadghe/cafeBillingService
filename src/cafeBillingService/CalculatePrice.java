@@ -40,8 +40,10 @@ public class CalculatePrice {
 		
 		//add service charge if customer order food
 		if(order.get("cheeseSandwitch") != 0 || order.get("steakSandwitch") != 0 ) {
-			total = total + (total/10);
-			System.out.println("SC (10%) : $" + df.format(total/10));
+			
+			double tenPercent = ( total / 100 ) * 10;
+			total = total + tenPercent;
+			System.out.println("SC (10%) : $" + df.format(tenPercent));
 		}
 		else {
 			System.out.println("SC : NA");
