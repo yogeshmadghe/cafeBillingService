@@ -37,7 +37,6 @@ public class CalculatePrice {
 		}
 
 		System.out.println("Subtotal : $" + df.format(total));
-		//System.out.println(df.format(total));1
 		
 		//add service charge if customer order food
 		if(order.get("cheeseSandwitch") != 0 || order.get("steakSandwitch") != 0 ) {
@@ -49,7 +48,8 @@ public class CalculatePrice {
 		}
 
 		//Round of total bill
-		return df.format( Math.round(total) );
+		//return df.format( Math.round(total) );
+		return df.format( total );
 		
 	}
 
